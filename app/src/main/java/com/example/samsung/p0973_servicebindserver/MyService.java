@@ -54,7 +54,7 @@ public class MyService extends Service {
         message = "MyService onUnbind()";
         Toast.makeText(this, message, LENGTH_SHORT).show();
         Log.d(LOG_TAG, message);
-        return super.onUnbind(intent);
+        return !super.onUnbind(intent);
     }
 
     @Override
